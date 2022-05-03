@@ -1,0 +1,14 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "Fisher"
+
+block content
+	include ../blocks/modules/header/header
+	include ../blocks/modules/content/content
+	include ../blocks/modules/footer/footer
+
+block scripts
+	//script(src="js/vendor.js")
+	script(src="js/main.js")
