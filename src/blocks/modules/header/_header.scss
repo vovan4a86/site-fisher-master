@@ -10,7 +10,7 @@
   left: 0;
   top: 0;
   opacity: .7;
-  background: url("../../../../img/bg/bg-h1.jpg") top left no-repeat ;
+  background: url("../img/bg/bg-h1.jpg") top left no-repeat ;
   background-size: 100% 100%;
 }
 .header {
@@ -37,14 +37,22 @@
   flex-direction: column;
   row-gap: 10px;
   z-index: 2;
+  text-align: center;
 }
-.header-email-btn, .header-order-btn {
+.header-email-btn,
+.header-order-btn,
+.header-phone-btn {
   font-size: .8rem;
   text-align: center;
   min-width: 200px;
 
   @media (max-width: 768px) {
     min-width: 140px;
+  }
+}
+.header-phone-btn {
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
   }
 }
 .header-email-btn:before {
@@ -54,7 +62,7 @@
   width: 1rem;
   height: 1rem;
   vertical-align: text-bottom;
-  background: url("../../../../img/svg/email.svg") center no-repeat;
+  background: url("../img/svg/email.svg") center no-repeat;
 }
 .header-order-btn:before {
   content: '';
@@ -63,5 +71,15 @@
   width: 1rem;
   height: 1rem;
   vertical-align: text-bottom;
-  background: url("../../../../img/svg/pen.svg") center no-repeat;
+  background: url("../img/svg/pen.svg") center no-repeat;
+}
+
+.header-phone-btn:before {
+  content: '';
+  display: inline-block;
+  margin-right: .5rem;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: text-bottom;
+  background: url("../img/svg/phone.svg") center no-repeat;
 }

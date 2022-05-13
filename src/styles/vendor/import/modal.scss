@@ -1,6 +1,6 @@
 /*!
  * Base Functionalities
- * whitouth this tinyModal probably won't work as spected
+ * without this tinyModal probably won't work as spected
 **/
 .tinymodal-cover {
   position: fixed;
@@ -18,7 +18,8 @@
   top: 50%;
   visibility: hidden;
   opacity: 0;
-  z-index: 2; }
+  z-index: 2;
+}
 
 .tinymodal-inner {
   position: relative;
@@ -35,7 +36,7 @@
 
 /*!
  * Base Design
- * can be overriden by your own styles in this or your stylesheed
+ * can be overridden by your own styles in this or your stylesheet
 **/
 .tinymodal-cover {
   background: rgba(0, 0, 0, 0.5); }
@@ -49,7 +50,8 @@
   transform: translate(-50%, -50%) scale(0.9); }
 
 .tinymodal-active .tinymodal-window-open {
-  transform: translate(-50%, -50%) scale(1); }
+  transform: translate(-50%, -50%) scale(1.5);
+}
 
 .tinymodal-window-open .tinymodal-close,
 .tinymodal-window-open button {}

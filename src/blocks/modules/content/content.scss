@@ -154,7 +154,6 @@
 
 //--------- ФОРМА ЗАКАЗА ---------------
 .order {
- //background: #cecece;
   background: #fdbca3;
 }
 .order-body {
@@ -168,6 +167,14 @@
   @media (max-width: 576px) {
     font-size: 1.5rem;
   }
+}
+#order-server-err {
+  display: block;
+  height: 23px;
+  margin-top: .5rem;
+  font-size: .6rem;
+  font-style: italic;
+  color: darkred;
 }
 
 #form {
@@ -215,7 +222,6 @@
   margin-top: 1rem;
   background: #e02222;
   color: white;
-  border: none;
 }
 .order-btn:hover {
   background: #ee5a5a;
@@ -268,7 +274,7 @@
 
 #agree:checked + label::before{
   background-color: #33cc33;
-  background-image: url("../../../../img/svg/check.svg");
+  background-image: url("../img/svg/check.svg");
 }
 
 /* стили при наведении курсора на checkbox */
@@ -281,16 +287,25 @@
   box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.25);
 }
 
+#modal-submit .modal-title  {
+  font-size: .8rem;
+}
 #modal-submit .modal-body {
   flex-direction: column;
   align-items: center;
   column-gap: 0;
   row-gap: 0;
   p {
+    font-size: .6rem;
     margin: .3rem 0;
+    text-align: center;
   }
 }
 
 #modal-submit .modal-wrapper {
-  padding: 1.5rem;
+  padding: 1.3rem;
 }
+#modal-submit .order-btn {
+  font-size: .6rem;
+}
+

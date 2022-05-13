@@ -7,28 +7,28 @@
 
       .content-fisher-imgs
         .content-fisher-small-img
-          a(href="../../../../img/detectors/fisher.png").tinymodal-modal
+          a(href="img/detectors/fisher.png").tinymodal-modal
             picture
-              source(src="../../../../img/detectors/fisher.png" type="image/jpeg")
-              img(src="../../../../img/detectors/fisher.webp")
-          a(href="../../../../img/detectors/fisher-block1.png").tinymodal-modal
+              source(src="img/detectors/fisher.png" type="image/jpeg")
+              img(src="img/detectors/fisher.webp")
+          a(href="img/detectors/fisher-block1.png").tinymodal-modal
             picture
-              source(src="../../../../img/detectors/fisher-block1.png" type="image/jpeg")
-              img(src="../../../../img/detectors/fisher-block1.webp")
-          a(href="../../../../img/detectors/fisher-block2.png").tinymodal-modal
+              source(src="img/detectors/fisher-block1.png" type="image/jpeg")
+              img(src="img/detectors/fisher-block1.webp")
+          a(href="img/detectors/fisher-block2.png").tinymodal-modal
             picture
-              source(src="../../../../img/detectors/fisher-block2.png" type="image/jpeg")
-              img(src="../../../../img/detectors/fisher-block2.webp")
+              source(src="img/detectors/fisher-block2.png" type="image/jpeg")
+              img(src="img/detectors/fisher-block2.webp")
         picture
-          source(src="../../../../img/detectors/gemini-1-bg.png" type="image/jpeg")
-          img(src="../../../../img/detectors/gemini-1-bg.webp").content-fisher-big-img
+          source(src="img/detectors/gemini-1-bg.png" type="image/jpeg")
+          img(src="img/detectors/gemini-1-bg.webp").content-fisher-big-img
 
   .content-chars-wrapper
     .content-chars.container
       .content-chars-img
         picture
-          source(src="../../../../img/bg/gemini-3-bg.png" type="image/jpeg")
-          img(src="../../../../img/bg/gemini-3-bg.webp")
+          source(src="img/bg/gemini-3-bg.png" type="image/jpeg")
+          img(src="img/bg/gemini-3-bg.webp")
       .content-chars-text
         .content-chars-header ТЕХНИЧЕСКИЕ ХАРАКТЕРИСТИКИ FISHER GEMINI-3
         .content-chars-subheader Большие возможности компактного глубинника
@@ -82,13 +82,13 @@
             span.content-chars-deep-name До 18 метров
             span.content-chars-deep-value Зона охвата в режиме "Индуктивный"
 
-  .order
+  .order#to-order
     .order-body.container
       .order-title ОСТАВИТЬ ЗАЯВКУ ПРОСТО!
       .order-subtitle
         p Вам нужно всего лишь заполнить форму заказа своими данными и нажать кнопку "Отправить заявку".
         p После этого с Вами сразу же свяжется наш сотрудник и ответит на все Ваши вопросы.
-        p Отправка формы не принуждает Вас ни к каким действиям. Это просто означает, что вам интересна одна из моделей Bounty Hunter от официального дилера в России
+        p Отправка формы не принуждает Вас ни к каким действиям. Это просто означает, что вам интересна одна из моделей #{name} от официального дилера в #{in_country}.
 
       form(action="" method="POST")#form
         .order-section
@@ -104,8 +104,8 @@
           input(type="email" name="email" required)
 
         .order-section
-          label Номер телефона +7-(xxx)-xxx-xxxx <span>*</span>
-          input(type="tel" name="phone" pattern="^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{9}$" required).tel
+          label Номер телефона <span>*</span>
+          input(type="tel" name="phone" pattern="^(\\+)?[0-9-]+" required).tel
 
         .order-section
           label Комментарий
@@ -116,13 +116,12 @@
           label(for="agree") Я согласен(-на) на обработку и хранение моих персональных данных.
 
         input(type="submit" name="btnSubmit" disabled value="Отправить заявку").btn.order-btn#send-order
+        span#order-server-err
 
     #modal-submit.tinymodal-window
       .modal-wrapper
         .modal-header
           .modal-title Заявка отправлена
-          .modal-close.tinymodal-close
-            img(src="../../../../img/svg/close.svg")
         .modal-body
           p Ваша заявка успешно отправлена.
           p Один из наших сотрудников скоро свяжется с вами.

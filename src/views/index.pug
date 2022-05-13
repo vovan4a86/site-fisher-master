@@ -2,7 +2,10 @@ extends layouts/default
 include helpers/mixins
 
 block variables
-	- const title = "Fisher"
+	- const title = "Fisher. Металлоискатели, катушки и аксессуары Fisher (Фишер)"
+	- const name = "Fisher"
+	- const in_country = "Узбекистане"
+
 
 block content
 	include ../blocks/modules/header/header
@@ -10,5 +13,4 @@ block content
 	include ../blocks/modules/footer/footer
 
 block scripts
-	//script(src="js/vendor.js")
 	script(src="js/main.js")

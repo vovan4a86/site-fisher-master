@@ -50,7 +50,7 @@ const requireDir = require("require-dir"),
             watch: "./src/fonts/**/*.{woff,woff2}"
         },
         favicons: {
-            src: "./src/img/favicon/*.{jpg,jpeg,png,gif,tiff}",
+            src: "./src/img/favicon/*.{jpg,jpeg,png,gif,tiff,ico}",
             dist: "./dist/img/favicons/",
         },
         gzip: {

@@ -36,6 +36,10 @@ a {
   padding: 0 20px;
 }
 
+input[type="submit"], button {
+  border: none;
+}
+
 .btn {
   padding: .5rem 1rem;
   display: inline-block;
@@ -60,6 +64,13 @@ a {
 .tinymodal-window {
   background: white;
   padding: 5px;
+}
+
+.tinymodal-inner {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .modal-wrapper {
