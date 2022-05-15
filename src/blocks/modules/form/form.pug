@@ -1,0 +1,44 @@
+.order#to-order
+	.order-body.container
+		.order-title ОСТАВИТЬ ЗАЯВКУ ПРОСТО!
+		.order-subtitle
+			p Вам нужно всего лишь заполнить форму заказа своими данными и нажать кнопку "Отправить заявку".
+			p После этого с Вами сразу же свяжется наш сотрудник и ответит на все Ваши вопросы.
+			p Отправка формы не принуждает Вас ни к каким действиям. Это просто означает, что вам интересна одна из моделей #{name} от официального дилера в #{in_country}.
+
+		form(action="" method="POST")#form
+			.order-section
+				label Как к вам обращаться <span>*</span>
+				input(type="text" name="name" required)
+
+			.order-section
+				label Город <span>*</span>
+				input(type="text" name="city" required)
+
+			.order-section
+				label Е-mail для ответа <span>*</span>
+				input(type="email" name="email" required)
+
+			.order-section
+				label Номер телефона <span>*</span>
+				input(type="tel" name="phone" pattern="^(\\+)?[0-9-]+" required).tel
+
+			.order-section
+				label Комментарий
+				textarea(rows="5" name="comment")
+
+			.order-agreement
+				input(type="checkbox" required )#agree
+				label(for="agree") Я согласен(-на) на обработку и хранение моих персональных данных.
+
+			input(type="submit" name="btnSubmit" disabled value="Отправить заявку").btn.order-btn#send-order
+			span#order-server-err
+
+	#modal-submit.tinymodal-window
+		.modal-wrapper
+			.modal-header
+				.modal-title Заявка отправлена
+			.modal-body
+				p Ваша заявка успешно отправлена.
+				p Один из наших сотрудников скоро свяжется с вами.
+				button.btn.order-btn.tinymodal-close Закрыть

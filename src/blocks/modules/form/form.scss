@@ -1,0 +1,157 @@
+//--------- ФОРМА ЗАКАЗА ---------------
+.order {
+  background: #fdbca3;
+}
+.order-body {
+  padding: 2rem 1rem;
+}
+
+.order-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  @media (max-width: 576px) {
+    font-size: 1.5rem;
+  }
+}
+#order-server-err {
+  display: block;
+  height: 23px;
+  margin-top: .5rem;
+  font-size: .6rem;
+  font-style: italic;
+  color: darkred;
+}
+
+#form {
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.order-section {
+  width: 100%;
+  margin-bottom: 1rem;
+  label {
+    margin-bottom: .25rem;
+    display: block;
+    font-style: italic;
+  }
+  label span {
+    color: red;
+  }
+  input,textarea {
+    width: 96%;
+    display: block;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 8px 8px 8px -5px rgba(34, 60, 80, 0.6);
+    border-bottom: 2px solid white;
+  }
+  input:active, textarea:active {
+    outline: none;
+  }
+  input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 10px 10px 10px -5px rgba(34, 60, 80, 0.8);
+
+  }
+
+  textarea {
+    resize: none;
+  }
+}
+.order {
+  box-shadow: 0 5px 5px -5px rgba(34, 60, 80, 0.6);
+}
+.order-btn {
+  margin-top: 1rem;
+  background: #e02222;
+  color: white;
+}
+.order-btn:hover {
+  background: #ee5a5a;
+  color: black;
+}
+.order-btn:disabled {
+  background: #b1afaf;
+}
+.order-btn:disabled:hover {
+  color: white;
+}
+
+.order-agreement {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+  margin-left: .5rem;
+}
+.order-agreement {
+  label {
+    font-size: .7rem;
+  }
+}
+#agree {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+#agree + label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+#agree + label::before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid black;
+  border-radius: .25rem;
+  margin-right: 1rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
+
+#agree:checked + label::before{
+  background-color: #33cc33;
+  background-image: url("../img/svg/check.svg");
+}
+
+/* стили при наведении курсора на checkbox */
+#agree:not(:disabled):not(:checked)+label:hover::before {
+  border-color: grey;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+#agree:focus+label::before {
+  box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.25);
+}
+
+#modal-submit .modal-title  {
+  font-size: .8rem;
+}
+#modal-submit .modal-body {
+  flex-direction: column;
+  align-items: center;
+  column-gap: 0;
+  row-gap: 0;
+  p {
+    font-size: .6rem;
+    margin: .3rem 0;
+    text-align: center;
+  }
+}
+
+#modal-submit .modal-wrapper {
+  padding: 1.3rem;
+}
+#modal-submit .order-btn {
+  font-size: .6rem;
+}
+
