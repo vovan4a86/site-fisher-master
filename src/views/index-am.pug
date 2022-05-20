@@ -1,0 +1,16 @@
+extends layouts/default-am
+include helpers/mixins
+
+block variables
+	- const title = "Fisher в Армении. Металлоискатели, катушки и аксессуары Fisher (Фишер)"
+	- const name = "Fisher"
+	- const in_country = "Армении"
+
+
+block content
+	include ../blocks/modules/header/header-am
+	include ../blocks/modules/content/content
+	include ../blocks/modules/footer/footer
+
+block scripts
+	script(src="js/main.js")

@@ -32,6 +32,20 @@
   }
 }
 
+.header-logo-text {
+  display: block;
+  font-size: .7rem;
+  text-transform: uppercase;
+  color: #75001e;
+  font-weight: 600;
+  @media (max-width: 576px) {
+    font-size: .5rem;
+  }
+  @media (max-width: 370px) {
+    font-size: .4rem;
+  }
+}
+
 .header-info {
   display: flex;
   flex-direction: column;
